@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Professional exterior cleaning across Norfolk & Suffolk. Oliver Exteriors & Maintenance offers gutter, fascia, soffit, conservatory, solar panel, and shopfront cleaning. Call 01502 819618 for a free quote.">
+  <meta name="keywords" content="exterior cleaning, gutter cleaning, fascia cleaning, soffit cleaning, conservatory cleaning, solar panel cleaning, shopfront cleaning, Norfolk, Suffolk, Lowestoft, Beccles, Great Yarmouth, Norwich">
+  <meta name="author" content="Oliver Exteriors & Maintenance">
+  <link rel="canonical" href="https://www.oliverexteriors.co.uk/">
+  <title>Oliver Exteriors & Maintenance — Professional Exterior Cleaning</title>
+  <style>
+    :root{
+      --nav-bg: #123a5a;
+      --accent: #2fb4e6;
+      --card-bg: rgba(255,255,255,0.06);
+      --muted: #b8d4e6;
+      --max-width: 1100px;
+      --radius: 12px;
+      --shadow: 0 6px 18px rgba(8,12,20,0.45);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0f2a3b 0%, #0b1720 60%);color:#e9f6ff;}
+    .topbar{
+      background:var(--nav-bg);
+      padding:10px 18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:nowrap;
+      gap:32px;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+    nav a{
+      color:rgba(255,255,255,0.92);
+      text-decoration:none;
+      font-weight:600;
+      transition:color 0.2s;
+      white-space:nowrap;
+    }
+    nav a:hover{ color:var(--accent); }
+    .quote{
+      background:var(--accent);
+      color:#fff;
+      padding:7px 10px;
+      border-radius:8px;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      flex-shrink:0;
+      margin-left:18px;
+    }
+    .wrap{max-width:var(--max-width);margin:26px auto;padding:0 18px}
+    .hero{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .hero .card{position:relative;overflow:hidden;border-radius:var(--radius);min-height:360px;display:flex;align-items:flex-end;box-shadow:var(--shadow);}
+    .card .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.45) saturate(0.95)}
+    .card .overlay{position:relative;padding:28px 26px 36px}
+    .card h2{margin:0;font-size:38px;line-height:1;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.5)}
+    .card p{margin-top:8px;color:rgba(255,255,255,0.87);max-width:90%}
+    .card.driveway .bg{background-image:url('driveway.jpg')}
+    .card.gutter .bg{background-image:url('gutter.jpg')}
+    .card.conservatory .bg{background-image:url('solar.jpg')}
+    .services{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .service {
+      background: var(--card-bg);
+      padding: 22px 18px;
+      border-radius: 14px;
+      flex: 1;
+      min-width: 260px;
+      box-shadow: 0 4px 16px rgba(8,12,20,0.18);
+      transition: transform 0.18s, box-shadow 0.18s;
+      border: 1.5px solid rgba(47,180,230,0.08);
+      position: relative;
+    }
+    .service:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(47,180,230,0.18);
+      border-color: var(--accent);
+      background: rgba(47,180,230,0.08);
+    }
+    .service h3 {
+      margin: 0 0 8px 0;
+      color: var(--accent);
+      font-size: 1.18rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-emoji {
+      font-size: 1.7em;
+      margin-right: 6px;
+      filter: drop-shadow(0 2px 2px rgba(47,180,230,0.18));
+    }
+    .service p {
+      margin: 0;
+      color: #e9f6ff;
+      font-size: 1.02rem;
+      line-height: 1.5;
+    }
+    .cta{
+      display:inline-block;
+      margin-top:12px;
+      padding:9px 14px;
+      border-radius:8px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.04);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition:background 0.2s;
+    }
+    .cta:hover{
+      background:var(--accent);
+      color:#023045;
+    }
+    footer{
+      margin:44px 0;
+      padding:22px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      max-width:var(--max-width);
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .footer-inner h3{margin:0 0 6px 0}
+    .footer-inner p{margin:0;color:var(--muted)}
+    .footer-inner .contact p:first-child{
+      margin:0;
+      font-weight:700;
+      color:var(--accent);
+      font-size:1.1rem;
+    }
+    .footer-inner .contact a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      height: auto;
+    }
+    .brand img {
+      width: 112px;
+      height: 112px;
+      object-fit: contain;
+      margin-right: 18px;
+      margin-top: -32px;
+      margin-bottom: -32px;
+      position: static;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
+    }
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+    .service-card .content {
+      padding: 20px;
+    }
+    .service-card h3 {
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+    .service-card p {
+      color: rgba(255,255,255,0.9);
+      font-size: 15px;
+    }
+    .services-list {
+      max-width: 800px;
+      margin: 48px auto 40px auto;
+      padding: 0 12px;
+    }
+    .services-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 1.08rem;
+    }
+    .services-list li:last-child {
+      border-bottom: none;
+    }
+    .service-icon {
+      font-size: 1.7em;
+      margin-top: 2px;
+    }
+    .services-list strong {
+      color: var(--accent);
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .services-list span:not(.service-icon) {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .work-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .work-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .work-images {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      align-items: center;
+    }
+    .work-images img {
+      width: 260px;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(47,180,230,0.18);
+      border: 2px solid rgba(47,180,230,0.12);
+      background: #222;
+    }
+    @media (max-width:700px){
+      .work-images img {
+        width: 44vw;
+        height: 62vw;
+        min-width: 120px;
+        min-height: 180px;
+        max-width: 220px;
+        max-height: 320px;
+      }
+    }
+    @media (max-width:1000px){
+      nav{gap:12px;}
+      .quote{padding:8px 12px;font-size:0.9rem;}
+    }
+    @media (max-width:800px){
+      .brand img{height:54px;}
+      nav a{font-size:0.9rem;}
+    }
+    @media (max-width:700px){
+      .topbar{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+        text-align:center;
+      }
+      nav{flex-wrap:wrap;justify-content:center;}
+      .quote{
+        order:3;
+        width:auto;
+      }
+      .footer-inner{
+        flex-direction:column;
+        text-align:center;
+        gap:8px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .hero .card {
+        min-width: 0;
+        width: 100%;
+      }
+      .brand img {
+        width: 64px;
+        height: 64px;
+        margin-right: 12px;
+        margin-top: -8px;
+        margin-bottom: -8px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .service-card img {
+        height: 140px;
+      }
+    }
+    .work-cta-flashy {
+      background: linear-gradient(90deg, #2fb4e6 0%, #123a5a 100%);
+      color: #fff;
+      padding: 28px 18px 22px 18px;
+      border-radius: 18px;
+      margin-top: 28px;
+      text-align: center;
+      box-shadow: 0 6px 32px rgba(47,180,230,0.25);
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      border: 2.5px solid #fff;
+      animation: flashBorder 1.2s infinite alternate;
+    }
+    .work-cta-flashy strong {
+      font-size: 1.35rem;
+      color: #fff;
+      text-shadow: 0 2px 8px #123a5a;
+    }
+    .work-cta-flashy span {
+      font-size: 1.1rem;
+      color: #e9f6ff;
+      display: block;
+      margin-top: 6px;
+    }
+    .work-cta-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 32px;
+      font-size: 1.18rem;
+      font-weight: 700;
+      background: #fff;
+      color: #123a5a !important;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(47,180,230,0.18);
+      text-decoration: none;
+      letter-spacing: 1px;
+      border: 2px solid #2fb4e6;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      animation: pulseBtn 1.2s infinite alternate;
+    }
+    .work-cta-btn:hover {
+      background: #2fb4e6;
+      color: #fff !important;
+      transform: scale(1.07);
+      border-color: #fff;
+    }
+    @keyframes pulseBtn {
+      0% { box-shadow: 0 2px 12px rgba(47,180,230,0.18); }
+      100% { box-shadow: 0 0 32px 8px #2fb4e6; }
+    }
+    @keyframes flashBorder {
+      0% { border-color: #fff; }
+      100% { border-color: #2fb4e6; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+  <nav>
+    <div class="brand">
+      <img src="logo.png" alt="Oliver Exteriors & Maintenance logo" width="100" height="100"/>
+    </div>
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+  </nav>
+  <a href="tel:01502 819618" class="quote">Call 01502 819618</a>
+</header>
+  <main class="wrap">
+    <div style="margin-top:48px; text-align:center;">
+      <h1 style="font-size:2.4rem; color:var(--accent); margin-bottom:8px;">Exterior Cleaning Experts</h1>
+      <p style="color:var(--muted); font-size:1.15rem; margin-bottom:28px;">
+        Reliable, professional exterior cleaning for homes and businesses across Norfolk &amp; Suffolk.
+      </p>
+    </div>
+    <section class="hero" aria-label="Services preview" style="margin-bottom:38px;">
+      <article class="card driveway" role="region" aria-label="Driveway & Patio Cleaning">
+        <div class="bg" aria-hidden="true"></div>
+        <div class="overlay">
+          <h2>Driveway & Patio Cleaning</h2>
+          <p>High-pressure cleaning for paths, car parks and all outdoor surfaces, restoring a fresh, clean finish.</p>
+          <a href="tel:01502819618" class="cta">Get a free quote</a>
+        </div>
+      </article>
+      <article class="card gutter" role="region" aria-label="Gutter, Fascia & Soffit Cleaning">
+        <div class="bg" aria-hidden="true"></div>
+        <div class="overlay">
+          <h2>Gutter, Fascia & Soffit Cleaning</h2>
+          <p>Clear blockages and remove grime from gutters, fascias and soffits to protect and brighten your home.</p>
+          <a href="tel:01502819618" class="cta">Book a clean</a>
+        </div>
+      </article>
+      <article class="card conservatory" role="region" aria-label="Conservatory & Solar Panel Cleaning">
+        <div class="bg" aria-hidden="true"></div>
+        <div class="overlay">
+          <h2>Conservatory & Solar Panels</h2>
+          <p>Gentle yet effective cleaning to keep glass, roofs and solar panels spotless and efficient all year round.</p>
+          <a href="tel:01502819618" class="cta">Request pricing</a>
+        </div>
+      </article>
+    </section>
+    <hr style="border: none; border-top: 2px solid var(--accent); margin: 0 0 48px 0; width: 100%; max-width: none;">
+    <div style="text-align:center; margin-bottom:32px;">
+      <h2 class="page-title" style="font-size:2.2rem; margin-bottom:10px;">Our Services</h2>
+      <p class="page-subtitle" style="color:var(--muted); margin-bottom:0;">
+        Professional exterior cleaning and maintenance across Norfolk &amp; Suffolk
+      </p>
+    </div>
+    <section id="services" class="services" aria-label="Our Services">
+      <div class="service">
+        <h3><span class="service-emoji">🧹</span> Gutter, Fascia, Soffit &amp; Cladding Cleaning</h3>
+        <p>Clear grime, moss, and build-up from gutters, fascias, soffits, and cladding. Restore your property’s appearance and prevent water damage.</p>
+      </div>
+      <div class="service">
+        <h3><span class="service-emoji">💦</span> High Pressure Cleaning</h3>
+        <p>Powerful, safe cleaning for driveways, patios, car parks, bins, and all outdoor spaces to remove dirt, algae, and stains.</p>
+      </div>
+      <div class="service">
+        <h3><span class="service-emoji">🏡</span> Conservatory Roof Cleaning</h3>
+        <p>Gentle, effective cleaning to keep your conservatory roof sparkling clear, improving natural light and longevity.</p>
+      </div>
+      <div class="service">
+        <h3><span class="service-emoji">🔆</span> Solar Panel Cleaning</h3>
+        <p>Specialist soft washing to safely remove debris and maintain solar panel efficiency, maximising energy output.</p>
+      </div>
+      <div class="service">
+        <h3><span class="service-emoji">🏪</span> Signage &amp; Shopfront Cleaning</h3>
+        <p>Enhance your business’s first impression with spotless signage and glass frontage cleaned to professional standards.</p>
+      </div>
+      <div style="width:100%;text-align:center;margin:28px 0 0 0;">
+        <p style="color:#fff;font-size:1.08rem;font-weight:500;">
+          Need something doing that we don’t offer?
+          <a href="tel:01502819618" style="color:var(--accent);font-weight:700;text-decoration:none;">
+            Get in touch
+          </a>
+          — we’re happy to discuss custom jobs and find a solution for you!
+        </p>
+      </div>
+    </section>
+    <hr style="border: none; border-top: 2px solid var(--accent); margin: 48px 0; width: 100%; max-width: none;">
+    <section id="work" style="margin:56px 0 0 0;">
+      <div style="text-align:center; margin-bottom:28px;">
+        <h2 style="font-size:2rem; color:var(--accent); margin-bottom:10px;">Our Work</h2>
+        <p style="color:var(--muted); font-size:1.08rem;">
+          Real before &amp; after results from our recent cleaning projects.
+        </p>
+      </div>
+      <ul class="work-list">
+        <li class="work-row">
+          <div class="work-images">
+            <img src="before1.jpg" alt="Before cleaning">
+            <img src="after1.jpg" alt="After cleaning">
+          </div>
+        </li>
+        <li class="work-row">
+          <div class="work-images">
+            <img src="before2.jpg" alt="Before cleaning">
+            <img src="after2.jpg" alt="After cleaning">
+          </div>
+        </li>
+        <li class="work-row">
+          <div class="work-images">
+            <img src="before3.jpg" alt="Before cleaning">
+            <img src="after3.jpg" alt="After cleaning">
+          </div>
+        </li>
+        <li class="work-row">
+          <div class="work-images">
+            <img src="before4.jpg" alt="Before cleaning">
+            <img src="after4.jpg" alt="After cleaning">
+          </div>
+        </li>
+        <li class="work-row">
+          <div class="work-cta-flashy">
+            <p>
+              <strong>Want results like these for your property?</strong><br>
+              <span>Get in touch today!</span>
+            </p>
+            <a href="tel:01502819618" class="cta work-cta-btn">📞 Call Now</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <footer id="contact">
+      <div class="footer-inner">
+        <div>
+          <h3>Oliver Exteriors & Maintenance</h3>
+          <p>Serving Lowestoft, Beccles, Great Yarmouth, Norwich & surrounding areas</p>
+        </div>
+        <div class="contact">
+          <p><a href="tel:01502 819618">01502 819618</a></p>
+          <p><a href="mailto:info@oliverexteriors.co.uk">info@oliverexteriors.co.uk</a></p>
+          <p><a target="_blank" href="https://www.facebook.com/oliverexteriorsmaintenance">Find us on Facebook</a></p>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Oliver Exteriors & Maintenance",
+  "image": "https://www.oliverexteriors.co.uk/logo.png",
+  "@id": "",
+  "url": "https://www.oliverexteriors.co.uk/",
+  "telephone": "01502 819618",
+  "email": "info@oliverexteriors.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lowestoft",
+    "addressRegion": "Suffolk",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["Lowestoft","Beccles","Great Yarmouth","Norwich"],
+  "priceRange": "££",
+  "sameAs": [
+    "https://www.facebook.com/oliverexteriorsmaintenance"
+  ]
+}
+</script>
