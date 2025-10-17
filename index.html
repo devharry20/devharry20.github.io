@@ -57,7 +57,6 @@
       margin-left:18px;
     }
 
-    /* PROMO BANNER */
     .promo-banner {
       background: linear-gradient(90deg, rgba(47,180,230,0.06), rgba(47,180,230,0.03));
       border-top: 2px solid rgba(47,180,230,0.08);
@@ -72,9 +71,8 @@
       align-items:center;
       gap:12px;
     }
-    /* The visible marquee track */
     .marquee {
-      --speed: 14s; /* adjust to change speed (lower = faster) */
+      --speed: 14s; 
       display:block;
       width:100%;
       overflow:hidden;
@@ -108,10 +106,8 @@
       box-shadow: 0 2px 8px rgba(8,12,20,0.25);
     }
 
-    /* Pause on hover */
     .marquee:hover .marquee-track { animation-play-state: paused; cursor:default; }
 
-    /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
       .marquee-track { animation: none; }
     }
@@ -121,7 +117,6 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* Screen-reader only text */
     .sr-only{
       position:absolute!important;
       height:1px;width:1px;
@@ -129,13 +124,18 @@
       white-space:nowrap;border:0;padding:0;margin:-1px;
     }
 
-    /* MAIN LAYOUT */
     .wrap{max-width:var(--max-width);margin:26px auto;padding:0 18px}
     .hero{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .hero .card{position:relative;overflow:hidden;border-radius:var(--radius);min-height:360px;display:flex;align-items:flex-end;box-shadow:var(--shadow);}
     .card .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.45) saturate(0.95)}
     .card .overlay{position:relative;padding:28px 26px 36px}
-    .card h2{margin:0;font-size:38px;line-height:1;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.5)}
+    .card h2 {
+      margin: 0;
+      font-size: clamp(24px, 2.5vw, 38px);
+      line-height: 1.1;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
     .card p{margin-top:8px;color:rgba(255,255,255,0.87);max-width:90%}
     .card.driveway .bg{background-image:url('driveway.jpg')}
     .card.gutter .bg{background-image:url('gutter.jpg')}
