@@ -460,6 +460,7 @@
       100% { border-color: #2fb4e6; }
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
@@ -471,27 +472,6 @@
         <a href="#services" aria-haspopup="true" aria-expanded="false">Services <span aria-hidden>▾</span></a>
         <ul class="dropdown" aria-label="Services submenu">
           <li><a href="gutter-fascia-soffit-cladding.html">Gutter, Fascia, Soffit &amp; Cladding</a></li>
-          <script>
-          // Improve dropdown usability: small delay before hiding so users can move mouse into menu
-          (function(){
-            const menus = document.querySelectorAll('.nav-item.services-menu');
-            menus.forEach(menu => {
-              const dropdown = menu.querySelector('.dropdown');
-              if(!dropdown) return;
-              let hideTimer = null;
-              const show = ()=>{ clearTimeout(hideTimer); dropdown.style.display = 'block'; menu.querySelector('a').setAttribute('aria-expanded','true'); };
-              const hide = ()=>{ hideTimer = setTimeout(()=>{ dropdown.style.display = ''; menu.querySelector('a').setAttribute('aria-expanded','false'); }, 200); };
-              menu.addEventListener('mouseenter', show);
-              menu.addEventListener('mouseleave', hide);
-              dropdown.addEventListener('mouseenter', show);
-              dropdown.addEventListener('mouseleave', hide);
-              // ensure keyboard users can open via focus
-              const link = menu.querySelector('a');
-              link.addEventListener('focus', show);
-              link.addEventListener('blur', hide);
-            });
-          })();
-          </script>
           <li><a href="high-pressure-cleaning.html">High Pressure Cleaning</a></li>
           <li><a href="conservatory-cleaning.html">Conservatory Cleaning</a></li>
           <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
@@ -675,6 +655,7 @@
     </footer>
   </main>
 
+  <script src="scripts.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
