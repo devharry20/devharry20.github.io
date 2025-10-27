@@ -1,0 +1,83 @@
+:root{
+  --nav-bg: #123a5a;
+  --accent: #2fb4e6;
+  --card-bg: rgba(255,255,255,0.06);
+  --muted: #b8d4e6;
+  --max-width: 1100px;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(8,12,20,0.45);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Shared navbar + dropdown styles used across all pages */
+.topbar{
+  background:var(--nav-bg);
+  padding:10px 18px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:nowrap;
+  gap:32px;
+}
+nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+nav a{
+  color:rgba(255,255,255,0.92);
+  text-decoration:none;
+  font-weight:600;
+  transition:color 0.2s;
+  white-space:nowrap;
+}
+nav a:hover{ color:var(--accent); }
+.quote{
+  background:var(--accent);
+  color:#fff;
+  padding:7px 10px;
+  border-radius:8px;
+  font-weight:700;
+  text-decoration:none;
+  white-space:nowrap;
+  flex-shrink:0;
+  margin-left:18px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+.brand img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  margin-right: 18px;
+  margin-top: -32px;
+  margin-bottom: -32px;
+  position: static;
+}
+.nav-item.services-menu{ position:relative; }
+.nav-item.services-menu > a{ display:inline-flex; align-items:center; gap:6px; }
+.nav-item .dropdown{ display:none; position:absolute; top:100%; left:0; background:rgba(2,18,28,0.95); border-radius:10px; padding:8px 0; min-width:260px; box-shadow:0 8px 24px rgba(8,12,20,0.5); z-index:999; }
+.nav-item .dropdown li{ list-style:none; }
+.nav-item .dropdown a{ display:block; padding:8px 14px; color:#fff; text-decoration:none; font-weight:600; }
+.nav-item .dropdown a:hover{ background:rgba(47,180,230,0.06); color:var(--accent); }
+.nav-item.services-menu:hover .dropdown,
+.nav-item.services-menu:focus-within .dropdown{ display:block; }
+
+@media (max-width:700px){
+  .topbar{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    text-align:center;
+  }
+  nav{flex-wrap:wrap;justify-content:center;}
+  .quote{order:3;width:auto}
+  .brand img{width:64px;height:64px;margin-right:12px;margin-top:-8px;margin-bottom:-8px}
+}
+
+/* Small utility shared by pages */
+.cta{display:inline-block;margin-top:12px;padding:9px 14px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.04);color:#fff;text-decoration:none;font-weight:600;transition:background 0.2s}
+.cta:hover{background:var(--accent);color:#023045}
