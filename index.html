@@ -57,6 +57,15 @@
       flex-shrink:0;
       margin-left:18px;
     }
+    /* Services dropdown */
+    .nav-item.services-menu{ position:relative; }
+    .nav-item.services-menu > a{ display:inline-flex; align-items:center; gap:6px; }
+  .nav-item .dropdown{ display:none; position:absolute; top:100%; left:0; background:rgba(2,18,28,0.95); border-radius:10px; padding:8px 0; min-width:260px; box-shadow:0 8px 24px rgba(8,12,20,0.5); z-index:999; }
+    .nav-item .dropdown li{ list-style:none; }
+    .nav-item .dropdown a{ display:block; padding:8px 14px; color:#fff; text-decoration:none; font-weight:600; }
+    .nav-item .dropdown a:hover{ background:rgba(47,180,230,0.06); color:var(--accent); }
+    .nav-item.services-menu:hover .dropdown,
+    .nav-item.services-menu:focus-within .dropdown{ display:block; }
 
     .promo-banner {
       background: linear-gradient(90deg, rgba(47,180,230,0.06), rgba(47,180,230,0.03));
@@ -456,9 +465,39 @@
   <header class="topbar">
     <nav>
       <div class="brand">
-        <img src="logo.png" alt="Oliver Exteriors & Maintenance logo" width="100" height="100"/>
+        <a href="index.html"><img src="logo.png" alt="Oliver Exteriors & Maintenance logo" width="100" height="100"/></a>
       </div>
-      <a href="#services">Services</a>
+      <div class="nav-item services-menu">
+        <a href="#services" aria-haspopup="true" aria-expanded="false">Services <span aria-hidden>▾</span></a>
+        <ul class="dropdown" aria-label="Services submenu">
+          <li><a href="gutter-fascia-soffit-cladding.html">Gutter, Fascia, Soffit &amp; Cladding</a></li>
+          <script>
+          // Improve dropdown usability: small delay before hiding so users can move mouse into menu
+          (function(){
+            const menus = document.querySelectorAll('.nav-item.services-menu');
+            menus.forEach(menu => {
+              const dropdown = menu.querySelector('.dropdown');
+              if(!dropdown) return;
+              let hideTimer = null;
+              const show = ()=>{ clearTimeout(hideTimer); dropdown.style.display = 'block'; menu.querySelector('a').setAttribute('aria-expanded','true'); };
+              const hide = ()=>{ hideTimer = setTimeout(()=>{ dropdown.style.display = ''; menu.querySelector('a').setAttribute('aria-expanded','false'); }, 200); };
+              menu.addEventListener('mouseenter', show);
+              menu.addEventListener('mouseleave', hide);
+              dropdown.addEventListener('mouseenter', show);
+              dropdown.addEventListener('mouseleave', hide);
+              // ensure keyboard users can open via focus
+              const link = menu.querySelector('a');
+              link.addEventListener('focus', show);
+              link.addEventListener('blur', hide);
+            });
+          })();
+          </script>
+          <li><a href="high-pressure-cleaning.html">High Pressure Cleaning</a></li>
+          <li><a href="conservatory-cleaning.html">Conservatory Cleaning</a></li>
+          <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+          <li><a href="signage-shopfront-cleaning.html">Signage &amp; Shopfront Cleaning</a></li>
+        </ul>
+      </div>
       <a href="#work">Our Work</a>
     </nav>
     <a href="tel:01502819618" class="quote">Call 01502 819618</a>
@@ -525,23 +564,23 @@
 
     <section id="services" class="services" aria-label="Our Services">
       <div class="service">
-        <h3><span class="service-emoji">🧹</span> Gutter, Fascia, Soffit &amp; Cladding Cleaning</h3>
+        <h3><a href="gutter-fascia-soffit-cladding.html" style="color:var(--accent);text-decoration:none;"><span class="service-emoji">🧹</span> Gutter, Fascia, Soffit &amp; Cladding Cleaning</a></h3>
         <p>Clear grime, moss, and build-up from gutters, fascias, soffits, and cladding. Restore your property’s appearance and prevent water damage.</p>
       </div>
       <div class="service">
-        <h3><span class="service-emoji">💦</span> High Pressure Cleaning</h3>
+        <h3><a href="high-pressure-cleaning.html" style="color:var(--accent);text-decoration:none;"><span class="service-emoji">💦</span> High Pressure Cleaning</a></h3>
         <p>Powerful, safe cleaning for driveways, patios, car parks, bins, and all outdoor spaces to remove dirt, algae, and stains.</p>
       </div>
       <div class="service">
-        <h3><span class="service-emoji">🏡</span> Conservatory Roof Cleaning</h3>
+        <h3><a href="conservatory-cleaning.html" style="color:var(--accent);text-decoration:none;"><span class="service-emoji">🏡</span> Conservatory Roof Cleaning</a></h3>
         <p>Gentle, effective cleaning to keep your conservatory roof sparkling clear, improving natural light and longevity.</p>
       </div>
       <div class="service">
-        <h3><span class="service-emoji">🔆</span> Solar Panel Cleaning</h3>
+        <h3><a href="solar-panel-cleaning.html" style="color:var(--accent);text-decoration:none;"><span class="service-emoji">🔆</span> Solar Panel Cleaning</a></h3>
         <p>Specialist soft washing to safely remove debris and maintain solar panel efficiency, maximising energy output.</p>
       </div>
       <div class="service">
-        <h3><span class="service-emoji">🏪</span> Signage &amp; Shopfront Cleaning</h3>
+        <h3><a href="signage-shopfront-cleaning.html" style="color:var(--accent);text-decoration:none;"><span class="service-emoji">🏪</span> Signage &amp; Shopfront Cleaning</a></h3>
         <p>Enhance your business’s first impression with spotless signage and glass frontage cleaned to professional standards.</p>
       </div>
 
@@ -583,6 +622,12 @@
           <div class="work-images">
             <img src="before3.jpg" alt="Before cleaning">
             <img src="after3.jpg" alt="After cleaning">
+          </div>
+        </li>
+        <li class="work-row">
+          <div class="work-images">
+            <img src="drivewayduring.jpg" alt="Before cleaning">
+            <img src="drivewayafter.jpg" alt="After cleaning">
           </div>
         </li>
         <li class="work-row">
