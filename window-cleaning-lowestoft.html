@@ -30,6 +30,16 @@
     nav{display:flex;align-items:center;gap:18px;}
     nav a{color:rgba(255,255,255,0.92);text-decoration:none;font-weight:600;transition:color 0.2s;white-space:nowrap;}
     nav a:hover{ color:var(--accent); }
+    .nav-dropdown {position: relative;display: inline-block;}
+    .dropdown-toggle {background: none;border: none;color: rgba(255,255,255,0.92);text-decoration: none;font-weight: 600;font-size: 1rem;cursor: pointer;transition: color 0.2s;white-space: nowrap;padding: 0;font-family: inherit;display: flex;align-items: center;gap: 6px;}
+    .dropdown-toggle:hover {color: var(--accent);}
+    .dropdown-toggle::after {content: '▼';font-size: 0.6em;transition: transform 0.3s;}
+    .dropdown-toggle.open::after {transform: rotate(180deg);}
+    .dropdown-menu {position: absolute;top: 100%;left: 0;background: var(--nav-bg);border: 1.5px solid rgba(47,180,230,0.3);border-radius: 8px;margin-top: 8px;min-width: 220px;box-shadow: 0 4px 16px rgba(8,12,20,0.4);display: none;flex-direction: column;z-index: 1000;overflow: hidden;}
+    .dropdown-menu.open {display: flex;}
+    .dropdown-menu a {padding: 12px 16px;color: rgba(255,255,255,0.92);text-decoration: none;font-weight: 500;transition: background 0.2s, color 0.2s;border-bottom: 1px solid rgba(255,255,255,0.05);}
+    .dropdown-menu a:last-child {border-bottom: none;}
+    .dropdown-menu a:hover {background: rgba(47,180,230,0.15);color: var(--accent);}
     .quote{background:var(--accent);color:#fff;padding:7px 10px;border-radius:8px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;margin-left:18px;}
     .wrap{max-width:var(--max-width);margin:28px auto;padding:18px;}
     header{background:var(--nav-bg);padding:12px 18px;}
@@ -52,7 +62,18 @@
       <div class="brand">
         <a href="index.html"><img src="logo.png" alt="Oliver Exteriors & Maintenance logo" width="100" height="100"/></a>
       </div>
-      <a href="index.html#services">Services</a>
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle">Services</button>
+        <div class="dropdown-menu">
+          <a href="gutter-cleaning-lowestoft.html">Gutter Cleaning</a>
+          <a href="fascia-soffit-cleaning-lowestoft.html">Fascia & Soffit</a>
+          <a href="window-cleaning-lowestoft.html">Window Cleaning</a>
+          <a href="driveway-cleaning-lowestoft.html">Driveway Cleaning</a>
+          <a href="patio-cleaning-lowestoft.html">Patio Cleaning</a>
+          <a href="conservatory-cleaning-lowestoft.html">Conservatory Cleaning</a>
+        </div>
+      </div>
       <a href="index.html#gallery-h">Gallery</a>
       <a href="index.html#faq">FAQ</a>
     </nav>
@@ -87,8 +108,28 @@
 
       <a href="tel:01502819618" class="cta">Call 01502 819618 for a Free Quote</a>
 
-      <p style="margin-top:20px;"><a href="index.html#services">← Back to services</a></p>
+      <p style="margin-top:20px;"><a href="/">← All Cleaning Services in Lowestoft</a></p>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      if (dropdownToggle && dropdownMenu) {
+        dropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropdownToggle.classList.toggle('open');
+          dropdownMenu.classList.toggle('open');
+        });
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.nav-dropdown')) {
+            dropdownToggle.classList.remove('open');
+            dropdownMenu.classList.remove('open');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
