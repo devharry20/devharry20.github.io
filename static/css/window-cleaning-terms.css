@@ -1,0 +1,31 @@
+@import url('./index.css');
+
+.service-content {
+	background: none;
+	color: #1a222c;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	padding: 44px 36px 36px 36px;
+	max-width: 950px;
+	margin: 48px auto;
+	text-align: center;
+}
+.service-content a {
+	color: #2196f3;
+	text-decoration: none !important;
+	font-weight: 500;
+	transition: color 0.18s;
+}
+.service-content a:hover {
+	color: #1565c0;
+	text-decoration: none !important;
+}
+.service-content h1,
+.service-content h2 {
+	color: #59bffe;
+}
+.service-content ul {
+	color: #333;
+	margin-bottom: 24px;
+}

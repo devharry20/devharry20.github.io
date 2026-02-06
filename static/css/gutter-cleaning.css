@@ -1,0 +1,96 @@
+@import url('./window-cleaning.css');
+
+/* You can override .service-content or other classes here if you want to tweak for gutter-cleaning specifically. */
+/* Gutter Cleaning Page Styles - matches index page */
+@import url('./index.css');
+
+.service-content {
+	background: #fff;
+	color: #222;
+	border-radius: 18px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+	padding: 32px 24px 24px 24px;
+	max-width: 900px;
+	margin: 24px auto 40px auto;
+}
+
+header.hero + main .service-content,
+header.hero + .service-content {
+  margin-top: 0 !important;
+}
+.service-content {
+	background: none;
+	color: #1a222c;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	padding: 44px 36px 36px 36px;
+	max-width: 950px;
+	margin: 48px auto;
+}
+.service-content h1,
+.service-content h2 {
+	color: #2bb6ff;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 12px;
+	letter-spacing: -1px;
+}
+.service-content h3 {
+	color: #1a222c;
+	font-weight: 600;
+	margin-top: 24px;
+	margin-bottom: 10px;
+}
+.service-content a {
+	color: #2196f3;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.18s;
+}
+.service-content a:hover {
+	color: #1565c0;
+	text-decoration: underline;
+}
+.service-content ul {
+	color: #222;
+	margin-bottom: 24px;
+	padding-left: 22px;
+}
+.service-content .muted {
+	color: #888;
+	font-size: 1.1rem;
+}
+.service-content .service-images {
+	display: flex;
+	gap: 18px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 32px 0;
+}
+.service-content .service-images img {
+	width: 100%;
+	max-width: 220px;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 6px 20px rgba(2,18,28,0.12);
+	border: 2px solid rgba(89,191,254,0.08);
+}
+	color: #333;
+	margin-bottom: 24px;
+}
+.service-content .service-images {
+	display: flex;
+	gap: 18px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 32px 0;
+}
+.service-content .service-images img {
+	width: 100%;
+	max-width: 220px;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 6px 20px rgba(2,18,28,0.12);
+	border: 2px solid rgba(89,191,254,0.08);
+}
