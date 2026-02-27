@@ -238,6 +238,84 @@
   }
 }
 /* REVIEWS SECTION */
+.contact-us-section {
+  background: #f4faff;
+  color: #222;
+  padding: 56px 0 48px 0;
+}
+.contact-us-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px 24px 24px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(30,144,255,0.08);
+}
+.contact-us-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #1e90ff;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-weight: 600;
+  color: #1e90ff;
+  margin-bottom: 2px;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #cbe3fa;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1.5px solid #1e90ff;
+  outline: none;
+  background: #fff;
+}
+.contact-submit {
+  background: #1e90ff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 0;
+  margin-top: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30,144,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.contact-submit:hover,
+.contact-submit:focus {
+  background: #1877cc;
+  box-shadow: 0 4px 16px rgba(30,144,255,0.13);
+}
+@media (max-width: 600px) {
+  .contact-us-container {
+    max-width: 98vw;
+    padding: 0 6vw;
+  }
+  .contact-form {
+    gap: 14px;
+  }
+}
 .reviews-section {
   background: #f8fafc;
   color: #222;
@@ -500,7 +578,6 @@
 .mobile-menu-call {
   width: 80%;
   max-width: 320px;
-  margin: 18px auto 0 auto;
   font-size: 1.3rem;
   padding: 16px 0;
   justify-content: center;
@@ -508,14 +585,12 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .mobile-call-btn-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 40px;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  width: 100vw;
-  pointer-events: auto;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .mobile-menu {
   position: relative;

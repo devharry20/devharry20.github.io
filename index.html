@@ -36,7 +36,9 @@
         <a href="/about-us.html">About Us</a>
         <a href="#services" class="nav-link">Our Services</a>
         <a href="/#reviews">Reviews</a>
-        <a href="tel:01502819618" class="call-btn mobile-menu-call">📞 Call us</a>
+        <div class="mobile-call-btn-wrapper">
+          <a href="tel:01502819618" class="call-btn mobile-menu-call">📞 Call us</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -157,9 +159,6 @@
     </div>
   </section>
 
-</body>
-<script src="static/index.js"></script>
-</html>
 </section>
 
   <section class="proudly-serving-section">
@@ -208,3 +207,40 @@
       </div>
     </div>
   </section>
+
+
+    <section class="contact-us-section">
+      <h2>Contact Us</h2>
+    <div class="contact-us-container">
+      <form class="contact-form" action="https://formspree.io/f/mjgezkeb" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9+()\-\s]{7,}" title="Please enter a valid phone number" autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="postcode">Postcode</label>
+          <input type="text" id="postcode" name="postcode" required pattern="[A-Za-z0-9\s]{4,8}" title="Please enter a valid postcode" autocomplete="postal-code">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Wanted</label>
+          <input type="text" id="service" name="service" required>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Optional"></textarea>
+        </div>
+        <button type="submit" class="contact-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</body>
+<script src="static/index.js"></script>
+</html>
