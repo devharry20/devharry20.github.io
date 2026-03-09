@@ -447,7 +447,7 @@
 .service-card-long {
   height: 350px;
   border-radius: 22px;
-  background: linear-gradient(rgba(0,0,0,0.32),rgba(0,0,0,0.32)), url('/static/images/windows.jpeg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.32),rgba(0,0,0,0.32)), url('/static/images/commercialwindowcropped.jpeg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   position: relative;
